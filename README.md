@@ -13,7 +13,7 @@ In order to access the app, you will first need:
 ## Running the app
 In order to run the app:
 + Build the app by pressing the green hammer button on your ASCode toolbar or command F9
-+ Run the app by pressing the green play button or shift F10
++ Run the app by pressing the green play button or shift F10 - this will launch the emulator from which you can explore the app 
 
 ## Firebase
 + You will not be able to directly view Firebase's Firestore
