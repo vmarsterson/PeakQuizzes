@@ -1,3 +1,23 @@
 <resources>
+    <string name="activity_main_title">Peak Quizzes</string>
+    <string name="registration_card_title"><b>Welcome!</b></string>
+    <!--    Register -->
+    <string name="registration_subtitle">Please register your new account</string>
+    <string name="registration_button_submit">Register</string>
+    <string name="registration_footnote">Already have any account? Login here</string>
+
+    <!--    Login -->
+    <string name="login_subtitle">Please enter your email and password</string>
+    <string name="login_button">Let\'s Go!</string>
+    <string name="login_footnote">New to Quiz App? \nCreate a new account <b>here</b></string>
+
+    <!--    Generic card-->
+    <string name="registration_email_hint">Email</string>
+    <string name="registration_password_hint">Password</string>
+    <string name="registration_name_hint">Full Name</string>
+
+    <!--    MainActivity Content-->
+    <string name="welcome_message">Welcome to your quiz! </string>
     <string name="app_name">Peak Quizzes</string>
+
 </resources>
