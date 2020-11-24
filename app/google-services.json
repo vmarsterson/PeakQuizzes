@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "770788458426",
+    "firebase_url": "https://peakquizzes.firebaseio.com",
+    "project_id": "peakquizzes",
+    "storage_bucket": "peakquizzes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770788458426:android:ffb598e08266cd72c12783",
+        "android_client_info": {
+          "package_name": "com.example.peakquizzes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770788458426-0nuus78fkdppqonv84f8jb83kgdkivl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo4oyn7A1uT0EOF2vjXLyE2oK4lKF962A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770788458426-0nuus78fkdppqonv84f8jb83kgdkivl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
