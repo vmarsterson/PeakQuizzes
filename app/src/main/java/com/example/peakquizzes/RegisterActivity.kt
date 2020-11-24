@@ -9,16 +9,5 @@ class RegisterActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_activity)
-//        val model: RegisterViewModel by viewModels()
-//        auth = FirebaseAuth.getInstance()
-//
-//        button_register.setOnClickListener {
-//            model.saveUserData()
-//        }
-//
-//        button_login_redirect.setOnClickListener {
-//            startActivity(Intent(this, LoginActivity::class.java))
-//            finish()
-//        }
     }
 }
