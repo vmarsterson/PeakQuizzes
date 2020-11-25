@@ -1,8 +1,9 @@
-package com.example.peakquizzes
+package com.example.peakquizzes.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.peakquizzes.ui.main.MainFragment
+import com.example.peakquizzes.R
+import com.example.peakquizzes.fragments.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

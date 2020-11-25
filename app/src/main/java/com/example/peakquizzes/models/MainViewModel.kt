@@ -1,4 +1,4 @@
-package com.example.peakquizzes.ui.main
+package com.example.peakquizzes.models
 
 import androidx.lifecycle.ViewModel
 
