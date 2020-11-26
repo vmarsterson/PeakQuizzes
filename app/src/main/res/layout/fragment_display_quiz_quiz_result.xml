@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.CreateQuizTitleFragment">
-
+    tools:context="com.example.android.navigation.QuizResultsFragment">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         style="@style/text_heading_2"
-        android:id="@+id/create_quiz_title_title"
+        android:id="@+id/display_quiz_results_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/create_quiz_title_title"
+        android:text="@string/display_quiz_results_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +26,7 @@
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/create_quiz_title_title">
+        app:layout_constraintTop_toBottomOf="@id/display_quiz_results_title">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +35,7 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/create_quiz_title_text"
+                android:id="@+id/display_quiz_results_text"
                 style="@style/text_body_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,27 +43,26 @@
                 android:paddingTop="12dp"
                 android:paddingRight="24dp"
                 android:paddingBottom="12dp"
-                android:text="@string/create_quiz_title_text" />
+                android:text="@string/display_quiz_results_text" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <TextView
+                android:id="@+id/display_quiz_results_number"
+                style="@style/text_body_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/create_quiz_title_hint"
-                    android:hint="@string/create_title_hint"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColorHint="@color/DarkGrey" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:paddingLeft="24dp"
+                android:paddingTop="12dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="12dp"
+                android:textSize="150sp"
+                android:textColor="@color/PrimaryPink"
+                android:layout_gravity="center"
+                android:text="@string/display_quiz_results_number" />
 
             <Button
                 style="@style/BlueCustomButton"
-                android:id="@+id/create_quiz_title_button"
-                android:text="@string/create_quiz_title_button"
+                android:id="@+id/home_buttom"
+                android:text="@string/home_button"
                 android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -47,7 +47,8 @@
     <string name="create_quiz_question_form_text_1">Your Question</string>
     <string name="create_quiz_question_hint">Question</string>
     <string name="create_quiz_question_form_text_2">Your answers…</string>
-    <string name="create_quiz_question_form_text_3">Enter your options and tick the 1 correct answer</string>
+    <string name="create_quiz_question_form_text_3">Enter the correct answer</string>
+    <string name="create_quiz_question_form_text_4">Enter some incorrect answers to fool your student</string>
     <string name="create_quiz_a1">Answer 1</string>
     <string name="create_quiz_a2">Answer 2</string>
     <string name="create_quiz_a3">Answer 3</string>
@@ -55,7 +56,7 @@
     <string name="create_quiz_form_next_button">Next</string>
     <string name="create_quiz_form_submit_button">Submit &amp; Review</string>
     <string name="create_quiz_form_add_question_button">Add Another Question</string>
-    <string name="create_quiz_answer_title">The Answer...</string>
+    <string name="create_quiz_answer_title">The Answer…</string>
     <string name="create_quiz_question_answer_text_1">Which is the correct answer?</string>
     <string name="example_answer_a">E.g. Answer 1: Blue</string>
     <string name="example_answer_b">E.g. Answer 2: Red</string>
@@ -65,13 +66,19 @@
     <string name="display_quiz_3">E.g. Title 3</string>
     <string name="display_quiz_4">E.g. Title 4</string>
     <string name="display_quiz_text_2">Idea of your own?</string>
-    <string name="display_quiz_title">Try a New Quiz...</string>
+    <string name="display_quiz_title">Try a New Quiz…</string>
     <string name="display_quiz_text_1">Click on a quiz to launch it</string>
     <string name="question_number_title">Question 1</string>
     <string name="quiz_question">E.g. Quiz Question</string>
     <string name="quiz_question_number">1.</string>
     <string name="quiz_question_correct_results_text">Congratulations! You got it right!</string>
-    <string name="quiz_question_wrong_results_text">Hmm... That doesn\'t seem quite right</string>
+    <string name="quiz_question_wrong_results_text">Hmm… That doesn\'t seem quite right</string>
     <string name="next_question_button">Next Question</string>
+    <string name="display_quiz_results_title">Your Results</string>
+    <string name="display_quiz_results_text">Congratulations, your score is:</string>
+    <string name="display_quiz_results_number">30%</string>
+    <string name="home_button">Return Home</string>
+    <string name="logout_button">Logout</string>
+
 
 </resources>

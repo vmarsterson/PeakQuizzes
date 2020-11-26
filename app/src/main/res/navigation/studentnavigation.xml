@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/studentButtonsFragment">
+    <fragment
+        android:id="@+id/studentButtonsFragment"
+        android:name="com.example.peakquizzes.fragments.StudentButtonsFragment"
+        android:label="StudentButtonsFragment" >
+        <action
+            android:id="@+id/action_studentButtonsFragment_to_chooseQuizFragment2"
+            app:destination="@id/chooseQuizFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayQuizFragment2"
+        android:name="com.example.peakquizzes.fragments.DisplayQuizFragment"
+        android:label="DisplayQuizFragment" >
+        <action
+            android:id="@+id/action_displayQuizFragment2_to_questionResultFragment2"
+            app:destination="@id/questionResultFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseQuizFragment2"
+        android:name="com.example.peakquizzes.fragments.ChooseQuizFragment"
+        android:label="ChooseQuizFragment" >
+        <action
+            android:id="@+id/action_chooseQuizFragment2_to_displayQuizFragment2"
+            app:destination="@id/displayQuizFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionResultFragment2"
+        android:name="com.example.peakquizzes.fragments.QuestionResultFragment"
+        android:label="QuestionResultFragment" >
+        <action
+            android:id="@+id/action_questionResultFragment2_to_quizResultsFragment2"
+            app:destination="@id/quizResultsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultsFragment2"
+        android:name="com.example.peakquizzes.fragments.QuizResultsFragment"
+        android:label="QuizResultsFragment" />
+</navigation>
