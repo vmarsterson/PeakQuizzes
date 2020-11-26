@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teachernavigation"
+    app:startDestination="@id/teacherButtonsFragment">
+
+    <fragment
+        android:id="@+id/displayQuizFragment"
+        android:name="com.example.peakquizzes.fragments.DisplayQuizFragment"
+        android:label="DisplayQuizFragment" >
+        <action
+            android:id="@+id/action_displayQuizFragment_to_questionResultFragment"
+            app:destination="@id/questionResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherButtonsFragment"
+        android:name="com.example.peakquizzes.fragments.TeacherButtonsFragment"
+        android:label="TeacherButtonsFragment" >
+        <action
+            android:id="@+id/action_teacherButtonsFragment_to_createQuizConfirmFragment"
+            app:destination="@id/createQuizConfirmFragment" />
+        <action
+            android:id="@+id/action_teacherButtonsFragment_to_chooseQuizFragment"
+            app:destination="@id/chooseQuizFragment" />
+        <action
+            android:id="@+id/action_teacherButtonsFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuizConfirmFragment"
+        android:name="com.example.peakquizzes.fragments.CreateQuizConfirmFragment"
+        android:label="CreateQuizConfirmFragment" >
+        <action
+            android:id="@+id/action_createQuizConfirmFragment_to_createQuizTitleFragment"
+            app:destination="@id/createQuizTitleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuizTitleFragment"
+        android:name="com.example.peakquizzes.fragments.CreateQuizTitleFragment"
+        android:label="CreateQuizTitleFragment" >
+        <action
+            android:id="@+id/action_createQuizTitleFragment_to_createQuizFormFragment"
+            app:destination="@id/createQuizFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuizFormFragment"
+        android:name="com.example.peakquizzes.fragments.CreateQuizFormFragment"
+        android:label="CreateQuizFormFragment" >
+        <action
+            android:id="@+id/action_createQuizFormFragment_self"
+            app:destination="@id/createQuizFormFragment" />
+        <action
+            android:id="@+id/action_createQuizFormFragment_to_teacherButtonsFragment"
+            app:destination="@id/teacherButtonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseQuizFragment"
+        android:name="com.example.peakquizzes.fragments.ChooseQuizFragment"
+        android:label="ChooseQuizFragment" >
+        <action
+            android:id="@+id/action_chooseQuizFragment_to_displayQuizFragment"
+            app:destination="@id/displayQuizFragment" />
+        <action
+            android:id="@+id/action_chooseQuizFragment_to_createQuizConfirmFragment"
+            app:destination="@id/createQuizConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionResultFragment"
+        android:name="com.example.peakquizzes.fragments.QuestionResultFragment"
+        android:label="QuestionResultFragment" >
+        <action
+            android:id="@+id/action_questionResultFragment_to_displayQuizFragment"
+            app:destination="@id/displayQuizFragment" />
+        <action
+            android:id="@+id/action_questionResultFragment_to_quizResultsFragment"
+            app:destination="@id/quizResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultsFragment"
+        android:name="com.example.peakquizzes.fragments.QuizResultsFragment"
+        android:label="QuizResultsFragment" >
+        <action
+            android:id="@+id/action_quizResultsFragment_to_teacherButtonsFragment"
+            app:destination="@id/teacherButtonsFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.peakquizzes.activities.LoginActivity"
+        android:label="LoginActivity" />
+</navigation>

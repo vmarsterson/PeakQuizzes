@@ -11,6 +11,7 @@ import com.example.peakquizzes.R
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity: AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -56,7 +57,7 @@ class LoginActivity: AppCompatActivity() {
             }
         } else {
             Toast.makeText(
-                baseContext, "Login failed, please try again",
+                baseContext, "We could not automatically log you in at this time, please login",
                 Toast.LENGTH_SHORT
             ).show()
         }
