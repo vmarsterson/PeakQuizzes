@@ -18,7 +18,7 @@ import com.google.firebase.ktx.Firebase
 
 class TeacherButtonsFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
-    val user = UserModel.User("John", "johntheman", "john@john.com", "teacher")
+    val user = UserModel.User("Verity", "vmarsterson", "verity.marsterson@hotmail.co.uk", "teacher")
     val string = "pete"
     val int = 2
 
@@ -51,11 +51,10 @@ class TeacherButtonsFragment : Fragment() {
                 logOut()
             }
             binding.teacherbuttons = this
-
             val user = UserModel.User(
-                name = "John",
-                username = "johntheman",
-                email = "john@john.com",
+                name = "Verity",
+                username = "vmarsterson",
+                email = "verity.marsterson@hotmail.co.uk",
                 type = "teacher"
             )
             binding.user = user

@@ -9,6 +9,9 @@
         <action
             android:id="@+id/action_studentButtonsFragment_to_chooseQuizFragment2"
             app:destination="@id/chooseQuizFragment2" />
+        <action
+            android:id="@+id/action_studentButtonsFragment_to_loginActivity2"
+            app:destination="@id/loginActivity2" />
     </fragment>
     <fragment
         android:id="@+id/displayQuizFragment2"
@@ -38,4 +41,10 @@
         android:id="@+id/quizResultsFragment2"
         android:name="com.example.peakquizzes.fragments.QuizResultsFragment"
         android:label="QuizResultsFragment" />
+    <activity
+        android:id="@+id/loginActivity2"
+        android:name="com.example.peakquizzes.activities.LoginActivity"
+        android:label="LoginActivity" />
 </navigation>
+
+<!--@ToDo: Finish the rest of the navigation paths for students-->

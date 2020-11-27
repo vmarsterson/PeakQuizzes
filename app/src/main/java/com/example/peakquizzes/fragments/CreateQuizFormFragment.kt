@@ -50,8 +50,8 @@ class CreateQuizFormFragment : Fragment() {
             )
 
             db
-                .collection("users").document("Mary")
-                .collection("quiz").document()
+                .collection("users").document("Verity")
+                .collection("quiz").document("Colours")
                 .set(question, SetOptions.merge())
                 .addOnSuccessListener {
                     Toast.makeText(activity, "Quiz Successfully Saved", Toast.LENGTH_SHORT).show()

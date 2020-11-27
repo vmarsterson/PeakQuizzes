@@ -37,7 +37,7 @@ class CreateQuizTitleFragment : Fragment() {
             )
 
             db
-                .collection("users").document("Mary")
+                .collection("users").document("Verity")
                 .collection("quiz").document(userQuizTitle)
                 .set(quizStructure, SetOptions.merge())
                 .addOnSuccessListener {
