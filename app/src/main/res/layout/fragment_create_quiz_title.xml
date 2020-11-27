@@ -5,6 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.navigation.CreateQuizTitleFragment">
 
+    <data>
+        <variable name="quiztitle" type="com.example.peakquizzes.fragments.CreateQuizTitleFragment"/>
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -54,7 +58,7 @@
                 android:layout_marginBottom="10dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/create_quiz_title_hint"
+                    android:id="@+id/create_quiz_title"
                     android:hint="@string/create_title_hint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -8,6 +8,7 @@
     <data>
         <variable name="teacherbuttons" type="com.example.peakquizzes.fragments.TeacherButtonsFragment"
             />
+        <variable name="user" type="com.example.peakquizzes.models.UserModel.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +23,7 @@
             style="@style/text_heading_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="{@user.name.text}"
+            android:text="@{`Welcome ` + user.name + `!`}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

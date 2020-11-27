@@ -12,12 +12,15 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.example.peakquizzes.R
 import com.example.peakquizzes.databinding.FragmentMainTeacherButtonsBinding
+import com.example.peakquizzes.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 
 class TeacherButtonsFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
-    val name: String = "Terry"
+    val user = UserModel.User("John", "johntheman", "john@john.com", "teacher")
+    val string = "pete"
+    val int = 2
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,17 +28,40 @@ class TeacherButtonsFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
-        val binding = DataBindingUtil.inflate<FragmentMainTeacherButtonsBinding>(inflater, R.layout.fragment_main_teacher_buttons, container, false)
-        binding.createQuizButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_teacherButtonsFragment_to_createQuizConfirmFragment))
-        binding.viewQuizzesButton
-        binding.testMyKnowledgeButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_teacherButtonsFragment_to_chooseQuizFragment))
-        binding.helpButton
-
-        binding.logoutButton.setOnClickListener{
-            logOut()
+        val binding = DataBindingUtil.inflate<FragmentMainTeacherButtonsBinding>(
+            inflater,
+            R.layout.fragment_main_teacher_buttons,
+            container,
+            false
+        )
+        binding.createQuizButton.setOnClickListener {
+            it.findNavController()
+                .navigate(TeacherButtonsFragmentDirections.actionTeacherButtonsFragmentToCreateQuizConfirmFragment(user.name))
+//                .navigate(TeacherButtonsFragmentDirections.actionTeacherButtonsFragmentToCreateQuizConfirmFragment(user.name))
+//        binding.createQuizButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_teacherButtonsFragment_to_createQuizConfirmFragment))
+        }
+            binding.viewQuizzesButton
+            binding.testMyKnowledgeButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(
+                    R.id.action_teacherButtonsFragment_to_chooseQuizFragment
+                )
+            )
+            binding.helpButton
+            binding.logoutButton.setOnClickListener {
+                logOut()
             }
+            binding.teacherbuttons = this
+
+            val user = UserModel.User(
+                name = "John",
+                username = "johntheman",
+                email = "john@john.com",
+                type = "teacher"
+            )
+            binding.user = user
         return binding.root
     }
+
 
         fun logOut() {
             auth.signOut()

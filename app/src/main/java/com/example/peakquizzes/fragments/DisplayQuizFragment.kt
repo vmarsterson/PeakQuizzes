@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -38,6 +37,12 @@ class DisplayQuizFragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
 
+
+    fun setQuestion() {
+        currentQuestion = questions[0]
+        answers = currentQuestion.answers.toMutableList()
+        answers.shuffle()
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,7 +56,7 @@ class DisplayQuizFragment : Fragment() {
         binding.quiz = this
 
         binding.quizAnswerA.setOnClickListener {
-            val texta = binding.quizAnswerA.getText()
+            val texta = binding.quizAnswerA.text
             if ( texta == currentQuestion.answers[0]) {
                 displayCongratulationsToast() }
             else {
@@ -60,7 +65,7 @@ class DisplayQuizFragment : Fragment() {
         }
 
         binding.quizAnswerB.setOnClickListener{
-            val textb = binding.quizAnswerB.getText()
+            val textb = binding.quizAnswerB.text
             if (textb == currentQuestion.answers[0]) {
                 displayCongratulationsToast()}
             else {
@@ -69,9 +74,8 @@ class DisplayQuizFragment : Fragment() {
         }
 
         binding.quizAnswerC.setOnClickListener{
-            val textc = binding.quizAnswerC.getText()
-            if (textc == currentQuestion.answers[0]) {
-                displayCongratulationsToast() }
+            val textc = binding.quizAnswerC.text
+            if (textc == currentQuestion.answers[0]) { displayCongratulationsToast() }
             else {
                 displayCommiserationsToast()
             }
@@ -80,16 +84,12 @@ class DisplayQuizFragment : Fragment() {
         return binding.root
     }
 
-    private fun setQuestion() {
-        currentQuestion = questions[0]
-        answers = currentQuestion.answers.toMutableList()
-        answers.shuffle()
-        }
+    private fun displayCongratulationsToast() {
+        Toast.makeText(activity,"That's right!", Toast.LENGTH_SHORT).show()
 
-    fun displayCongratulationsToast() {
-        Toast.makeText(getActivity(),"That's right!",Toast.LENGTH_SHORT).show()
     }
-    fun displayCommiserationsToast() {
-        Toast.makeText(getActivity(),"Hmm... That's not quite right!",Toast.LENGTH_SHORT).show()
-        }
+    private fun displayCommiserationsToast() {
+        Toast.makeText(activity,"Hmm... That's not quite right!", Toast.LENGTH_SHORT).show()
+    }
+
     }
