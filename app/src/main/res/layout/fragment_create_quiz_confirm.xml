@@ -5,6 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.navigation.CreateQuizConfirmFragment">
 
+    <data>
+        <variable name="confirmfragment" type="com.example.peakquizzes.fragments.CreateQuizConfirmFragment"
+            />
+        <variable name="user" type="com.example.peakquizzes.models.UserModel.User" />
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -46,7 +52,8 @@
                 android:paddingTop="12dp"
                 android:paddingRight="24dp"
                 android:paddingBottom="12dp"
-                android:text="@string/create_quiz_confirm_text" />
+                android:text="@string/create_quiz_confirm_text"
+                />
 
             <Button
                 style="@style/BlueCustomButton"

@@ -15,7 +15,6 @@ import com.google.firebase.ktx.Firebase
 
 class LoginActivity: AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -32,35 +31,17 @@ class LoginActivity: AppCompatActivity() {
         }
     }
 
-  private fun redirectUser() {
-        val intent = Intent(this, RegisterActivity::class.java)
-        startActivity(intent)
-    }
-
     public override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
     }
 
-    private fun updateUI(currentUser: FirebaseUser?) {
-        if (currentUser != null ) {
-            if(currentUser.isEmailVerified) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }else{
-                Toast.makeText(
-                    baseContext, "Please verify your email address.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        } else {
-            Toast.makeText(
-                baseContext, "We could not automatically log you in at this time, please login",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+
+
+        private fun redirectUser() {
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
     }
 
     private fun loginUser() {
@@ -96,4 +77,23 @@ class LoginActivity: AppCompatActivity() {
             }
     }
 
+    private fun updateUI(currentUser: FirebaseUser?) {
+        if (currentUser != null ) {
+            if(currentUser.isEmailVerified) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else{
+                Toast.makeText(
+                    baseContext, "Please verify your email address.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        } else {
+            Toast.makeText(
+                baseContext, "We could not automatically log you in at this time, please login",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
 }
