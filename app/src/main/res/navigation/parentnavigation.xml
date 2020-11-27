@@ -10,6 +10,9 @@
         <action
             android:id="@+id/action_parentButtonsFragment_to_chooseQuizFragment3"
             app:destination="@id/chooseQuizFragment3" />
+        <action
+            android:id="@+id/action_parentButtonsFragment_to_loginActivity3"
+            app:destination="@id/loginActivity3" />
     </fragment>
     <fragment
         android:id="@+id/chooseQuizFragment3"
@@ -39,4 +42,8 @@
         android:id="@+id/quizResultsFragment3"
         android:name="com.example.peakquizzes.fragments.QuizResultsFragment"
         android:label="QuizResultsFragment" />
+    <activity
+        android:id="@+id/loginActivity3"
+        android:name="com.example.peakquizzes.activities.LoginActivity"
+        android:label="LoginActivity" />
 </navigation>

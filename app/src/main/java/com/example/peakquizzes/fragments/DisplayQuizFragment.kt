@@ -37,7 +37,6 @@ class DisplayQuizFragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
 
-
     fun setQuestion() {
         currentQuestion = questions[0]
         answers = currentQuestion.answers.toMutableList()
@@ -86,10 +85,9 @@ class DisplayQuizFragment : Fragment() {
 
     private fun displayCongratulationsToast() {
         Toast.makeText(activity,"That's right!", Toast.LENGTH_SHORT).show()
-
     }
+
     private fun displayCommiserationsToast() {
         Toast.makeText(activity,"Hmm... That's not quite right!", Toast.LENGTH_SHORT).show()
     }
-
-    }
+ }
